@@ -1,7 +1,7 @@
 #!/bin/bash
 # Vyrobí samostatnou verzi ukázkové stránky pro vlastní GitHub Pages.
 #
-# Zdroj je jediný: metodus/obsah/predstaveni.html v repozitáři webu. Tenhle
+# Zdroj je jediný: obsah/predstaveni.html v repozitáři Metodusu. Tenhle
 # skript z něj udělá index.html, ve kterém nezůstane ani jeden odkaz ven ze
 # souboru — to je celý smysl samostatného nasazení. Konkrétně:
 #   • podpis.js a apps.js se vypustí (stránka si podpis dopíše sama do patičky
@@ -15,8 +15,8 @@
 set -e
 cd "$(dirname "$0")"
 
-ZDROJ="../---------------github_site/metodus/obsah/predstaveni.html"
-IKONA="../---------------github_site/metodus/favicon.svg"
+ZDROJ="../metodus/obsah/predstaveni.html"
+IKONA="../metodus/favicon.svg"
 
 [ -f "$ZDROJ" ] || { echo "✘ Nenašel jsem zdroj: $ZDROJ"; exit 1; }
 [ -f "$IKONA" ] || { echo "✘ Nenašel jsem favikonu: $IKONA"; exit 1; }

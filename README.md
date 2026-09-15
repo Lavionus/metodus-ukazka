@@ -9,14 +9,19 @@ https://lavionus.github.io/metodus-ukazka/   ← ukázka
 https://lavionus.github.io/                  ← 404, odtud se nikam nedostaneš
 ```
 
-(Hlavní web běží na `lavionus.github.io/site/`. Tu cestu nemá návštěvník
-ukázky jak uhodnout. Repozitáře na profilu GitHubu ale veřejné zůstávají –
-kdo bude cíleně hledat, najde je; tohle řeší až vlastní doména.)
+(Hlavní web běží na `lavionus.github.io/site/`, Metodus na
+`lavionus.github.io/metodus/`. Ani jednu z těch cest nemá návštěvník ukázky jak
+uhodnout. Repozitáře na profilu GitHubu ale veřejné zůstávají – kdo bude cíleně
+hledat, najde je; tohle řeší až vlastní doména.)
 
 ## Jak se stránka aktualizuje
 
-Zdroj je **jediný**: `metodus/obsah/predstaveni.html` v repozitáři webu.
+Zdroj je **jediný**: `obsah/predstaveni.html` v repozitáři Metodusu
+(`../metodus/`).
 Zdejší `index.html` je z něj vyrobená kopie – needituj ji, přepíše se.
+
+Obvykle není potřeba nic dělat ručně: `upload.sh` v repozitáři hlavního webu
+nahrává všechny tři weby naráz a tenhle skript si spustí sám. Samostatně:
 
 ```bash
 ./aktualizuj.sh     # vyrobí index.html ze zdroje a ověří, že nevede nikam ven
